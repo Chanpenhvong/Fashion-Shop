@@ -1,0 +1,12 @@
+.con-title{
+    max-width: 1200px;
+    height: 50px;
+    /* background: #b16a6a; */
+    border-bottom: 2px solid black;
+}
+.con-title .title{
+    font-size: 35px;
+    font-family: inria-san;
+    color: rgb(91, 48, 48);
+}
+

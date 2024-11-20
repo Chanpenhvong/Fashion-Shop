@@ -1,0 +1,533 @@
+@font-face {
+    font-family: mental;
+    src: url(../font/Mental/Metal-Regular.ttf);
+}
+@font-face {
+    font-family: fasthand;
+    src: url(../font/Fast-hand/Fasthand-Regular.ttf);
+}
+@font-face {
+    font-family: caprasimo ;
+    src: url(../font/Caprasimo/Caprasimo-Regular.ttf);
+}
+@font-face {
+    font-family: signika ;
+    src: url(../font/Signika_Negative/SignikaNegative-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: merri ;
+    src: url(../font/Merriweather/Merriweather-Regular.ttf);
+}
+.header{
+    height: 80px;
+    background: rgb(177, 200, 153);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.logo-cart{
+    /* background: red; */
+    display: flex;
+    justify-content: 50px start;
+    align-items: center;
+}
+.logo-cart .logo-img{
+    height: 70px;
+    width: 70px;
+    /* background-color: green; */
+}
+.logo-cart .logo-img .logo{
+    width: 70px;
+    height: 70px;
+}
+.logo-name{
+    margin-left: 10px;
+}
+.logo-name h1{
+    color: #E69D30;
+    font-family: caprasimo;
+}
+
+
+.cart-icon{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;  
+    justify-content: end;  
+    align-items: center;
+
+}
+.cart-icon .icon{
+    width: 250px;
+    /* height: 50px; */
+    /* background-color: rgb(71, 51, 51); */
+    float: right;
+}
+.cart-icon .icon .icon-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* background: yellow; */
+    margin-top: 15px;
+}
+.cart-icon .icon .icon-list .icon-item{
+    color: rgb(12, 0, 0);
+    
+}
+
+/* off canva body */
+.offcanvas-body{
+    /* display: flex; 
+    justify-content: center; 
+    align-items: center; */
+    padding-left: 0px !important;
+    overflow-x: hidden;
+}
+
+.icon-body{
+    font-size: 50px;
+}
+.text-body{
+    font-size: 30px;
+    font-family: mental;
+}
+.cart-icon .icon .icon-list .icon-item svg:active{
+    color: rgb(148, 119, 119);
+}
+.modal-body{
+    padding: 2px !important;
+}
+.form-inputs{
+    position:relative;
+}
+.form-inputs .form-control{
+    height:43px; 
+    font-family: mental;
+}
+
+.form-inputs .form-control:focus{
+    box-shadow:none;
+    border:1px solid #000;
+}
+
+.form-inputs i{
+    position:absolute;
+    right:10px;
+    top:10px;
+    font-size: 25px;
+}
+.form-inputs i:hover{
+    color: gray;
+}
+.form-inputs i:active{
+    color: black;
+}
+.cart-icon .icon .icon-list .icon-item .dropdown-menu{
+    background-color: rgb(170, 161, 119);
+    border: 3px solid rgb(185, 166, 166);
+
+}
+.cart-icon .icon .icon-list .icon-item .dropdown-menu .dropdown-list{
+    position: relative;
+}
+.cart-icon .icon .icon-list .icon-item .dropdown-menu .dropdown-list:hover .dropdown-menu-sub{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+    right: 105%;
+   top: 0px;
+}
+.cart-icon .icon .icon-list .icon-item .dropdown-menu .dropdown-item{
+    color: rgb(61, 33, 33);
+    font-family: signika;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+
+
+.cart-icon .icon .icon-list .icon-item .dropdown-menu .dropdown-item:hover{
+    background-color: rgb(83, 79, 79);
+    color: rgb(198, 198, 198);
+    padding-left: 20px;
+    transition: 0.3s;
+}
+.cart-icon .icon .icon-list .icon-item .dropdown-menu .dropdown-item svg{
+    margin-bottom: 2px !important;
+}
+.cart-icon .icon .icon-list .icon-item:hover{
+    color: rgb(143, 54, 54);
+}
+.cart-icon .icon .icon-list .icon-item .bi-list, .search-res{
+    visibility: hidden;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .cart-icon .icon .icon-list .icon-item .bi-list, .search-res{
+        visibility: visible;
+        margin-right: 30px;
+        /* background: #da2121; */
+    }
+    .icon1{
+        visibility: hidden;
+    }
+    .cart-icon .icon .icon-list .icon-item{
+        width: 150px !important;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .cart-icon .icon .icon-list{
+        /* float: left; */
+        /* width: 100px; */
+        margin-left: 60px;
+    }
+
+
+    
+}
+@media only screen and (max-width:1200px) {
+    .container-navbar .item-list .item .link{
+        font-size: 10px;
+        font-family: signika;
+        color: rgb(62, 34, 34);
+        
+        text-decoration: none; /* Remove default underline */
+        display: inline-block; /* Make the link a block element */
+        position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+      
+        /* Transition for smooth animation */
+        transition: color 0.3s, transform 0.3s;
+    }
+
+
+    
+}
+.container-navbar{
+    height: 45px;
+    background: rgb(191, 217, 161);
+    border-top: 1px solid white;
+    position: sticky;
+    top: 0px;
+    /* overflow: hidden; */
+}
+.container-navbar .item-list{
+    height: 44px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+.container-navbar .item-list .item{
+    height: 35px;
+    /* width: 130px; */
+    /* background-color: rgb(34, 56, 56); */
+    display: flex;
+    padding: 10px 10px 0px 15px;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid white;
+}
+.container-navbar .item-list .item .link{
+    font-size: 20px;
+    font-family: signika;
+    color: rgb(62, 34, 34);
+    
+    text-decoration: none; /* Remove default underline */
+    display: inline-block; /* Make the link a block element */
+    position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+  
+    /* Transition for smooth animation */
+    transition: color 0.3s, transform 0.3s;
+}
+
+  
+  /* Style for the before pseudo-element */
+  .item-list .item .link::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+    bottom: -2px; /* Position at the bottom */
+    left: 50%; /* Position at the horizontal center */
+    width: 0; /* Initially set width to 0 */
+    height: 3px; /* Set the line height */
+    background-color: #494c21; /* Set the line color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+    transform-origin: 50% 50%; /* Set the transform origin to the center */
+  }
+  
+  /* Hover effect */
+.item-list .item .link:hover {
+    color: #6f5944; /* Change text color on hover */
+  }
+  
+  /* Expand effect on hover */
+  .item-list .item .link:hover::before {
+    width: 100%; /* Expand width to 100% on hover */
+    left: 0; /* Move to the left edge */
+  }
+.item .dropdown .dropdown-menu1{
+   left: -50px !important;
+   width: 100px;
+   background: #B1C899;
+   border: 1px solid white;
+}
+.item .dropdown .dropdown-menu1 .dropdown-item{
+    color: rgb(73, 37, 37) !important;
+    text-decoration: none; /* Remove default underline */
+    display: inline-block; /* Make the link a block element */
+    position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+  
+    /* Transition for smooth animation */
+    transition: color 0.3s, transform 0.3s;
+}
+ /* Style for the before pseudo-element */
+ .item .dropdown .dropdown-menu1 .dropdown-item::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+    bottom: -2px; /* Position at the bottom */
+    left: 50%; /* Position at the horizontal center */
+    width: 0; /* Initially set width to 0 */
+    height: 3px; /* Set the line height */
+    background-color: #ffffff; /* Set the line color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+    transform-origin: 50% 50%; /* Set the transform origin to the center */
+  }
+  
+  /* Hover effect */
+  .item .dropdown .dropdown-menu1 .dropdown-item:hover {
+    color: #c3c3c3; /* Change text color on hover */
+    background: #a3bd86 !important;
+  }
+  
+  /* Expand effect on hover */
+  .item .dropdown .dropdown-menu1 .dropdown-item:hover::before {
+    width: 100%; 
+    left: 0;
+  }
+
+  .item .dropdown .dropdown-menu2{
+    left: -20px !important;
+    width: 100px;
+    background: #312d2d;
+    border: 1px solid white;
+ }
+ .item .dropdown .dropdown-menu2 .dropdown-item{
+     color: white !important;
+     text-decoration: none; /* Remove default underline */
+     display: inline-block; /* Make the link a block element */
+     position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+    font-family: mental;
+     /* Transition for smooth animation */
+     transition: color 0.3s, transform 0.3s;
+ }
+  /* Style for the before pseudo-element */
+  .item .dropdown .dropdown-menu2 .dropdown-item::before {
+     content: ""; /* Empty content for pseudo-element */
+     position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+     bottom: 2px; /* Position at the bottom */
+     left: 50%; /* Position at the horizontal center */
+     width: 0; /* Initially set width to 0 */
+     height: 3px; /* Set the line height */
+     background-color: #ffffff; /* Set the line color */
+     transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+     transform-origin: 50% 50%; /* Set the transform origin to the center */
+   }
+   
+   /* Hover effect */
+   .item .dropdown .dropdown-menu2 .dropdown-item:hover {
+     color: #c3c3c3; /* Change text color on hover */
+     background: rgb(63, 63, 63) !important;
+   }
+   
+   /* Expand effect on hover */
+   .item .dropdown .dropdown-menu2 .dropdown-item:hover::before {
+     width: 100%; /* Expand width to 100% on hover */
+     left: 0; /* Move to the left edge */
+   }
+   @media only screen and (max-width:1200px) {
+    .container-navbar {
+        display: none;
+    }
+}
+.offcanvas-start{
+    width: 200px !important; 
+    top: 80px !important; 
+    background: rgb(215, 223, 185);
+}
+.offcanvas-start .offcanvas-title{
+    color: rgb(63, 39, 39);
+}
+.offcanvas-start .btn-close{
+    color: rgb(44, 31, 31) !important;
+    /* background: white; */
+}
+.canva-menu{
+    align-items: start;
+    justify-content: start;
+}
+/* .canva-menu .menu-list{
+    
+} */
+
+.divider{
+    width: 150px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    margin:10px auto;
+}
+.canva-menu .menu-item{
+    width: 200px;
+    list-style: none;
+    /* background: green; */
+    margin-left: -48px;
+    display: flex;
+    /* align-items: center; */
+    margin-top: 1px;
+    padding-left: 20px;
+    white-space: nowrap;
+
+}
+.canva-menu .menu-item .menu-link{
+    text-decoration: none;
+    /* width: 100%; */
+    height: 35px;
+    color: rgb(62, 36, 36);
+    white-space: nowrap;
+    /* display: inline-block; */
+    /* background-color: red; */
+    font-family: signika;    
+    text-align: left;
+    Padding-top: 7px;
+    margin: 0px 20px; 
+    position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+  
+    /* Transition for smooth animation */
+    transition: color 0.3s, transform 0.3s;
+}
+
+
+  
+  /* Style for the before pseudo-element */
+  .canva-menu .menu-item .menu-link::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+    bottom: -2px; /* Position at the bottom */
+    left: 50%; /* Position at the horizontal center */
+    width: 0; /* Initially set width to 0 */
+    height: 2px; /* Set the line height */
+    background-color: #f9f8f8; /* Set the line color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+    transform-origin: 50% 50%; /* Set the transform origin to the center */
+  }
+  
+  /* Hover effect */
+  .canva-menu .menu-item .menu-link:hover {
+    color: #c3c3c3; /* Change text color on hover */
+  }
+  
+  /* Expand effect on hover */
+  .canva-menu .menu-item .menu-link:hover::before {
+    width: 100%; /* Expand width to 100% on hover */
+    left: 0; /* Move to the left edge */
+  }
+.navbar-off{
+    width: 200px !important;
+    /* background: red; */
+    margin-left: -40px; 
+}
+.navbar-off .nav-item-off{
+    /* background: green; */
+    padding-left: 20px;
+}
+
+.navbar-off .nav-item-off .nav-link-off{
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none; /* Remove default underline */
+    display: inline-block; /* Make the link a block element */
+    position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+   font-family: signika;
+    /* Transition for smooth animation */
+    transition: color 0.3s, transform 0.3s;
+}
+ /* Style for the before pseudo-element */
+ .navbar-off .nav-item-off .nav-link-off::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+    bottom: 5px !important; /* Position at the bottom */
+    left: 50%; /* Position at the horizontal center */
+    width: 0; /* Initially set width to 0 */
+    height: 3px; /* Set the line height */
+    background-color: #ffffff; /* Set the line color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+    transform-origin: 50% 50%; /* Set the transform origin to the center */
+  }
+  
+  /* Hover effect */
+  .navbar-off .nav-item-off .nav-link-off:hover {
+    color: #c3c3c3; /* Change text color on hover */
+    /* background: rgb(63, 63, 63) !important; */
+  }
+  
+  /* Expand effect on hover */
+  .navbar-off .nav-item-off .nav-link-off:hover::before {
+    width: 100%; /* Expand width to 100% on hover */
+    left: 0; /* Move to the left edge */
+  }
+.dropdown-menu-off{
+    background-color: rgb(171, 185, 138) !important;
+    border: none !important;
+    transition: 0.5s !important;
+    padding-left: 20px ;
+}
+/* .dropdown-menu-off .dropdown-item-off {
+    
+} */
+
+.dropdown-menu-off .dropdown-item-off{
+    color: rgb(72, 33, 33) !important;
+    width: auto !important;
+    /* background: #000; */
+    font-family: signika !important;
+    font-size: 17px !important;
+    padding: 0px !important;
+    text-decoration: none; /* Remove default underline */
+    display: inline-block; /* Make the link a block element */
+    position: relative; /* Set position to relative for absolute positioning of pseudo-elements */
+   /* font-family: mental; */
+    /* Transition for smooth animation */
+    transition: color 0.3s, transform 0.3s;
+}
+.dropdown-menu-off .dropdown-item-off-kh{
+    font-family: mental !important;
+    font-size: 17px !important;
+}
+ /* Style for the before pseudo-element */
+ .dropdown-menu-off .dropdown-item-off::before {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Set position to absolute for absolute positioning relative to the parent */
+    bottom: 3px; /* Position at the bottom */
+    left: 50%; /* Position at the horizontal center */
+    width: 0; /* Initially set width to 0 */
+    height: 2px; /* Set the line height */
+    background-color: #ffffff; /* Set the line color */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition for smooth width change and left position change */
+    transform-origin: 50% 50%; /* Set the transform origin to the center */
+  }
+  
+  /* Hover effect */
+  .dropdown-menu-off .dropdown-item-off:hover {
+    color: #c3c3c3; /* Change text color on hover */
+    background: rgba(63, 63, 63, 0) !important;
+  }
+  
+  /* Expand effect on hover */
+  .dropdown-menu-off .dropdown-item-off:hover::before {
+    width: 100%; /* Expand width to 100% on hover */
+    left: 0; /* Move to the left edge */
+  }
+
+
+  

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVCP</title>
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/itemCart.css">
+    <link rel="stylesheet" href="./js/script.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <div class="container-fluid header">
+    <div class="container">
+      <div class="row">
+        <div class="col-5 logo-cart">
+          <div class="logo-img">
+            <img class="logo" src="./img/image.png" alt="">
+          </div>
+          <div class="logo-name">
+            <h1>KVCP Boutique</h1>
+          </div>
+        </div>
+        <div class="col-2">
+          
+        </div>
+        <div class="col-5">
+          <div class="cart-icon">
+            <div class="icon">
+              <ul class="icon-list">
+                <li class="icon-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-search icon1" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <!-- <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> -->
+                        <div class="modal-body">
+                          <div class="d-flex form-inputs">
+                            <input class="form-control" type="text" placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="icon-item">
+                  <a href="./pages/others/mycart.html" class="icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-cart icon1" viewBox="0 0 16 16" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="icon-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-person-circle icon1" viewBox="0 0 16 16" data-bs-toggle="dropdown" aria-expanded="false">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                  </svg>
+
+                  <div class="dropdown">
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button> -->
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./pages/others/signup.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                      </svg>&nbsp;Signup</a></li>
+                      <li><a class="dropdown-item" href="./pages/others/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                        <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                        <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
+                      </svg>&nbsp;Login</a></li>
+                    </ul>
+                  </div>
+
+                </li>
+                <li class="icon-item">
+                  <svg style="margin-top: 5px;"  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search search-res" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                  
+                  
+                  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button> -->
+
+                  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">KVCP Boutique</h5>
+                      <button style="color: aliceblue !important;" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body canva-menu">
+                      <ul class="menu-list">
+                        <li class="menu-item"><a class="menu-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg>&nbsp;Search</a>
+                        </li>
+                        <li class="menu-item">
+                          <a class="menu-link" href="./pages/others/mycart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>&nbsp;Cart</a>
+                        </li>
+                        <li class="menu-item">
+                          <a class="menu-link" href="./pages/others/signup.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                          </svg>&nbsp;My Account</a>
+                        </li>
+                        <div class="divider"></div>
+
+                        <nav class="navbar navbar-expand-lg navbar-off" >
+                          <div class="container-fluid">
+
+                            <div style="display: block !important;" class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-off ">
+                                <li class="nav-item nav-item-off ">
+                                  <a class="nav-link nav-link-off active" aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i>&nbsp;HOME</a>
+                                </li>
+
+                                <li class="nav-item dropdown nav-item-off">
+                                  <a class="nav-link nav-link-off dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-clock"></i>&nbsp;MEN&nbsp;
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-off">
+                                    <li><a class="dropdown-item dropdown-item-off " href="./pages/forMen/menShirt.html">Shirts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/menPant.html">Paints</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/bage.html">Bage</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/shoes.html">Shoes</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/wallet.html">Wallets</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/belts.html">Belts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forMen/socks.html">Shock</a></li>
+                                    <!-- <li><hr class="dropdown-divider"></li> -->
+                                    <!-- <li><a class="dropdown-item dropdown-item-off" href="#">Something else here</a></li> -->
+                                  </ul>  
+                                </li> 
+                                <li class="nav-item dropdown nav-item-off">
+                                  <a class="nav-link nav-link-off dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-clock"></i>&nbsp;WOMEN&nbsp;
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-off">
+                                    <li><a class="dropdown-item dropdown-item-off " href="./pages/forWomen/shirts.html">Shirts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/pants.html">Pants</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/dress.html">Dress</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/bage.html">Bages</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/shoes.html">Shoes</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/wallet.html">Wallets</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/belt.html">Belts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/forWomen/socks.html">Shocks</a></li>
+                                    <!-- <li><hr class="dropdown-divider"></li> -->
+                                    <!-- <li><a class="dropdown-item dropdown-item-off" href="#">Something else here</a></li> -->
+                                  </ul>  
+                                </li> 
+                                <li class="nav-item dropdown nav-item-off">
+                                  <a class="nav-link nav-link-off dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-clock"></i>&nbsp;KID&nbsp;
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-off">
+                                    <li><a class="dropdown-item dropdown-item-off " href="./pages/kids/shirt.html">Shirts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/kids/pant.html">Pants</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/kids/bag.html">Bages</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/kids/shoes.html">Shoes</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/kids/belt.html">Belts</a></li>
+                                    <li><a class="dropdown-item dropdown-item-off" href="./pages/kids/sock.html">Shocks</a></li>
+                                    <!-- <li><hr class="dropdown-divider"></li> -->
+                                    <!-- <li><a class="dropdown-item dropdown-item-off" href="#">Something else here</a></li> -->
+                                  </ul>  
+                                </li> 
+                                <li class="nav-item nav-item-off">
+                                  <a class="nav-link nav-link-off" href="./pages/others/discount.html"><i class="fa-solid fa-plane-arrival"></i>&nbsp;SPECIAL OFFER</a>
+                                </li> 
+                                <li class="nav-item nav-item-off">
+                                  <a class="nav-link nav-link-off" href="./pages/others/contact.html">
+                                    <i class="fa-solid fa-percent"></i>&nbsp;CONTACT US
+                                  </a>
+                                </li>
+                                
+                                <li class="nav-item nav-item-off">
+                                  <a class="nav-link nav-link-off" href="./pages/others/about.html">
+                                    <i class="fa-solid fa-address-card"></i>&nbsp;ABOUT US
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </nav> 
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-navbar">
+    <div class="container">
+      <ul class="item-list">
+        <li class="item"><a class="link" href="./index.html"><i class="fa-solid fa-house"></i>&nbsp;HOME</a></li>
+        <li class="item">
+          
+          <div class="dropdown">
+            <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a> -->
+
+            <a class="link" href="#" data-bs-toggle="dropdown" aria-expanded="false">&nbsp;MEN&nbsp;<i class="fa-solid fa-chevron-down"></i></a>
+          
+            <ul class="dropdown-menu dropdown-menu1">
+              <li><a class="dropdown-item" href="./pages/forMen/menShirt.html">Men's shirts</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/menPant.html">Men's Pants</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/bag.html">Bags</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/shoes.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/wallet.html">Wallets</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/belts.html">Belts</a></li>
+              <li><a class="dropdown-item" href="./pages/forMen/socks.html">Socks</a></li>
+
+            </ul>
+          </div>        
+        </li>
+        <li class="item">
+          
+            <div class="dropdown">
+              <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a> -->
+              <a class="link" href="#" data-bs-toggle="dropdown" aria-expanded="false">&nbsp;WOMEN&nbsp;<i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="dropdown-menu dropdown-menu1">
+                <li><a class="dropdown-item" href="./pages/forWomen/shirts.html">Women's shirts</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/pants.html">Women's pants</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/dress.html">Women's Dress</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/bag.html">Bags</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/shoes.html">Shoes</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/wallet.html">Wallets</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/belt.html">Belts</a></li>
+                <li><a class="dropdown-item" href="./pages/forWomen/socks.html">Socks</a></li>
+  
+              </ul>
+            </div>        
+        </li>
+        <li class="item">
+          
+            <div class="dropdown">
+              <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a> -->
+  
+              <a class="link" href="#" data-bs-toggle="dropdown" aria-expanded="false">&nbsp;KID&nbsp;<i class="fa-solid fa-chevron-down"></i></a>
+            
+              <ul class="dropdown-menu dropdown-menu1">
+                <li><a class="dropdown-item" href="./pages/kids/shirt.html">Kid's shirts</a></li>
+                <li><a class="dropdown-item" href="./pages/kids/pant.html">Kid's pants</a></li>
+                <li><a class="dropdown-item" href="./pages/kids/bag.html">Bags</a></li>
+                <li><a class="dropdown-item" href="./pages/kids/shoes.html">Shoes</a></li>
+                <li><a class="dropdown-item" href="./pages/kids/belt.html">Belts</a></li>
+                <li><a class="dropdown-item" href="./pages/kids/sock.html">Socks</a></li>
+  
+              </ul>
+            </div>        
+          </li>
+        <li class="item"><a class="link" href="./pages/others/discount.html"><i class="fa-solid fa-percent"></i>&nbsp;SPECIAL OFFER</a></li>
+        
+        <li class="item"><a class="link" href="./pages/others/contact.html"><i class="fa-solid fa-address-card"></i>&nbsp;CONTACT US</a></li>
+        <li class="item"><a class="link" href="./pages/others/about.html"><i class="fa-solid fa-user"></i>&nbsp;ABOUT US</a></li>
+      </ul>
+      
+    </div>
+  </div>
+  <!--Swipper-->
+
+<!-- Swiper -->
+<div class="container swiper-div">
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <a href="./pages/forMen/menShirt.html" class="swiper-slide">
+          <img src="./img/swipper/slider-1.webp" alt="">
+        </a>
+        <a href="./pages/forWomen/shirts.html" class="swiper-slide">
+          <img src="./img/swipper/slider-2.webp" alt="">
+        </a>
+        <a href="./pages/kids/shirt.html" class="swiper-slide">
+          <img src="./img/swipper/slider-3.webp" alt="">
+        </a>
+        <a href="./pages/others/discount.html" class="swiper-slide">
+          <img src="./img/swipper/slider-5.jpg" alt="">
+        </a>
+        
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+</div>
+<div class="container mt-5">
+  <h2 style="font-family: inria-san; font-size: 50px; font-weight: bold; text-align: center; text-decoration: underline; color: rgb(75, 102, 93);" >Category</h2>
+</div>
+<div class="container category mt-5 mb-5">
+  <div class="row">
+    <a href="./pages/forMen/menShirt.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/SmartCasual1.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Smart Casual</p>
+    </a>
+    <a href="./pages/forWomen/shirts.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/SmartCasual2.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Smart Casual</p>
+    </a>
+    <a href="./pages/forMen/menShirt.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/menshirt.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Men Shirt</p>
+    </a>
+    <a href="./pages/forMen/menPant.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/men-pants.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Men Pants</p>
+    </a>
+    <a href="./pages/forWomen/shirts.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/T-Shirt (2)-cr-450x672.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Women Shirts</p>
+    </a>
+    <a href="./pages/forWomen/pants.html" class="cart-category col-xl-4 col-lg-6 col-md-12">
+      <div class="cart-img">
+        <img class="category-img" src="./img/category/Jean (3)-cr-450x672.jpg" alt="">
+      </div>
+      <p class="title-category mt-1">Women Pants</p>
+    </a>
+
+    
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <h2 style="font-family: inria-san; font-size: 50px; font-weight: bold; text-align: center; text-decoration: underline; color: rgb(75, 102, 93);" >Men</h2>
+</div>
+
+
+<div class="container main-category mt-5 mb-5">
+  <div class="row">
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div class="cate-img">
+        <a href="/pages/forMen/menShirt.html">
+          <img class="img" src="./img/category/image.png" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Men's Shirts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/menPant.html">
+          <img class="img" src="./img/category/Jeans (3)-cr-450x672.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Men's Pants</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/bag.html">
+          <img class="img" src="./img/category/WRIST-BAG (1).jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Bage</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/wallet.html">
+          <img class="img" src="./img/category/menwallet.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Wallets</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/belts.html">
+          <img class="img" src="./img/category/Belt (2).jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Belts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/shoes.html">
+          <img class="img" src="./img/category/shoes men.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Shoes</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forMen/socks.html">
+          <img class="img" src="./img/category/10S24SOC003_B-GARDEN-(1).jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Sock</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Women-->
+
+<div class="container mt-5">
+  <h2 style="font-family: inria-san; font-size: 50px; font-weight: bold; text-align: center; text-decoration: underline; color: rgb(75, 102, 93);" >Women</h2>
+</div>
+
+
+<div class="container main-category mt-5 mb-5">
+  <div class="row">
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div class="cate-img">
+        <a href="/pages/forWomen/shirts.html">
+          <img class="img" src="./img/category/WomenShirt.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Women's Shirts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/pants.html">
+          <img class="img" src="./img/category/WomenJeans.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Women's Pants</p>
+      </div>
+    </div>
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/dress.html">
+          <img class="img" src="./img/category/Dress.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Dress</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/bag.html">
+          <img class="img" src="./img/category/WowenBag.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Bages</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/wallet.html">
+          <img class="img" src="./img/category/WomenWallets.webp" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Wallets</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/belt.html">
+          <img class="img" src="./img/category/WomenBelt.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Belts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/shoes.html">
+          <img class="img" src="./img/category/WomenShoes.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Shoes</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/forWomen/socks.html">
+          <img class="img" src="./img/category/WomenSock.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Sock</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Kids-->
+
+<div class="container mt-5">
+  <h2 style="font-family: inria-san; font-size: 50px; font-weight: bold; text-align: center; text-decoration: underline; color: rgb(75, 102, 93);" >KID</h2>
+</div>
+
+
+<div class="container main-category mt-5 mb-5">
+  <div class="row">
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div class="cate-img">
+        <a href="/pages/kids/">
+          <img class="img" src="./img/category/KidT-Shirt.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Kid's Shirts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/kids/pant.html">
+          <img class="img" src="./img/category/KidPants.jpg" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Kid's Pants</p>
+      </div>
+    </div>
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/kids/bag.html">
+          <img class="img" src="./img/category/kidBage.webp" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Kid's Bage</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/kids/belt.html">
+          <img class="img" src="./img/category/kidBelt.webp" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Belts</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/kids/shoes.html">
+          <img class="img" src="./img/category/KidShoes.webp" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Shoes</p>
+      </div>
+    </div>
+
+    <div class="cart-main col-xl-3 col-lg-4 col-md-6">
+      <div href="" class="cate-img">
+        <a href="/pages/kids/sock.html">
+          <img class="img" src="./img/category/kidSock.webp" alt="">
+        </a>
+      </div>
+      <div class="title-cate mt-2">
+        <p class="title">Sock</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Women-->
+
+<div class="container mt-5">
+  <h2 style="font-family: inria-san; font-size: 50px; font-weight: bold; text-align: left; text-decoration: underline; color: rgb(75, 102, 93);" >Recomended</h2>
+</div>
+
+<div class="container item-col mt-5 mb-2">
+  <div class="row">
+    <!--Produce cart-->
+    <div class="col-md-3 col-sm-4 col-6">
+      <div class="product-grid">
+          <div class="product-image">
+              <a href="#" class="image">
+                  <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (4).jpg">
+                  <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (3).jpg">
+              </a>
+              <ul class="product-links">
+                  <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+                  <li><a href="#"><i class="fa fa-random"></i></a></li>
+                  <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-content">
+              <ul class="rating">
+                  <li class="fas fa-star"></li>
+                  <li class="fas fa-star"></li>
+                  <li class="fas fa-star"></li>
+                  <li class="fas fa-star"></li>
+                  <li class="fas fa-star disable"></li>
+                  <li class="disable">(1 reviews)</li>
+              </ul>
+              <h3 class="title"><a href="#">Loose Fit Acid Washed T-Shirt</a></h3>
+              <div class="price">$17.59</div>
+          </div>
+      </div>
+  </div>
+  <!--End Card-->
+
+  <!--Produce cart-->
+  <div class="col-md-3 col-sm-4 col-6">
+    <div class="product-grid">
+        <div class="product-image">
+            <a href="#" class="image">
+                <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (1).jpg">
+                <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (2).jpg">
+            </a>
+            <ul class="product-links">
+                <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+                <li><a href="#"><i class="fa fa-random"></i></a></li>
+                <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+            <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="product-content">
+            <ul class="rating">
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star disable"></li>
+                <li class="disable">(1 reviews)</li>
+            </ul>
+            <h3 class="title"><a href="#">T-Shirt With Embroidery</a></h3>
+            <div class="price">$22.59</div>
+        </div>
+    </div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+  <div class="product-grid">
+      <div class="product-image">
+          <a href="#" class="image">
+              <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (6).jpg">
+              <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (5).jpg">
+          </a>
+          <ul class="product-links">
+              <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+              <li><a href="#"><i class="fa fa-random"></i></a></li>
+              <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+          <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+      </div>
+      <div class="product-content">
+          <ul class="rating">
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star"></li>
+              <li class="fas fa-star disable"></li>
+              <li class="disable">(1 reviews)</li>
+          </ul>
+          <h3 class="title"><a href="#">Basketball T-Shirt With Print</a></h3>
+          <div class="price">$14.95</div>
+      </div>
+  </div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+<div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (7).jpg">
+            <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (8).jpg">
+        </a>
+        <ul class="product-links">
+            <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="#"><i class="fa fa-random"></i></a></li>
+            <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star disable"></li>
+            <li class="disable">(1 reviews)</li>
+        </ul>
+        <h3 class="title"><a href="#">Sport Life T-Shirt</a></h3>
+        <div class="price">$14.95</div>
+    </div>
+</div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+<div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (10).jpg">
+            <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (9).jpg">
+        </a>
+        <ul class="product-links">
+            <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="#"><i class="fa fa-random"></i></a></li>
+            <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star disable"></li>
+            <li class="disable">(1 reviews)</li>
+        </ul>
+        <h3 class="title"><a href="#">Sport Life T-Shirt</a></h3>
+        <div class="price">$15.95</div>
+    </div>
+</div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+<div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (11).jpg">
+            <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (12).jpg">
+        </a>
+        <ul class="product-links">
+            <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="#"><i class="fa fa-random"></i></a></li>
+            <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star disable"></li>
+            <li class="disable">(1 reviews)</li>
+        </ul>
+        <h3 class="title"><a href="#">Sport Life T-Shirt</a></h3>
+        <div class="price">$13.95</div>
+    </div>
+</div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+<div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (13).jpg">
+            <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (14).jpg">
+        </a>
+        <ul class="product-links">
+            <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="#"><i class="fa fa-random"></i></a></li>
+            <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star disable"></li>
+            <li class="disable">(1 reviews)</li>
+        </ul>
+        <h3 class="title"><a href="#">Sport Life T-Shirt</a></h3>
+        <div class="price">$13.95</div>
+    </div>
+</div>
+</div>
+<!--End Card-->
+<!--Produce cart-->
+<div class="col-md-3 col-sm-4 col-6">
+<div class="product-grid">
+    <div class="product-image">
+        <a href="#" class="image">
+            <img class="img-1" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (16).jpg">
+            <img class="img-2" src="/img/Men's T-Shirts _ ZANDO_files/t-shirt M (20).jpg">
+        </a>
+        <ul class="product-links">
+            <li><a href="/pages/others/detail.html"><i class="fa-solid fa-eye"></i></a></li>
+            <li><a href="#"><i class="fa fa-random"></i></a></li>
+            <li><a href="/pages/others/mycart.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+        <a href="#" class="product-view" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></a>
+    </div>
+    <div class="product-content">
+        <ul class="rating">
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star"></li>
+            <li class="fas fa-star disable"></li>
+            <li class="disable">(1 reviews)</li>
+        </ul>
+        <h3 class="title"><a href="#">Basketball Tank Top</a></h3>
+        <div class="price">$11.59</div>
+    </div>
+</div>
+</div>
+<!--End Card-->
+
+  </div>
+</div>
+
+
+<div class="d-flex flex-column h-100">
+
+
+  <!-- FOOTER -->
+  <footer class="w-100 py-4 flex-shrink-0">
+      <div class="container py-4">
+          <div class="row gy-4 gx-5">
+              <div class="col-lg-4 col-md-6">
+                  <h5 class="h1 text-dark">KCVP Collection.</h5>
+                  <p class="small text-muted">Our web design team from Norton University is currently in our third year, second semester, majoring in Software Development. We specialize in creating innovative and user-friendly web solutions, focusing on front-end development. </p>
+                  <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">kcvpcollection.com</a></p>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                  <h5 class="text-dark mb-3">Quick links</h5>
+                  <ul class="list-unstyled text-muted">
+                      <li><a class="link-footer" href="/index.html">Home</a></li>
+                      <li><a class="link-footer" href="./pages/others/about.html">About</a></li>
+                      <li><a class="link-footer" href="./pages/others/discount.html">Special Offer</a></li>
+                      <li><a class="link-footer" href="#">FAQ</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                  <h5 class="text-dark mb-3">Our Menu</h5>
+                  <ul class="list-unstyled text-muted">
+                      <li><a class="link-footer" href="./pages/forMen/menShirt.html">Men</a></li>
+                      <li><a class="link-footer" href="./pages/forWomen/shirts.html">Women</a></li>
+                      <li><a class="link-footer" href="./pages/kids/shirt.html">Kids</a></li>
+                      <li><a class="link-footer" href="./pages/others/contact.html">Contact Us</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <h5 class="text-dark mb-3">Newsletter</h5>
+                  <p class="small">We, the web design team from Norton University, are always open to receiving your comments and feedback.</p>
+                  <form action="#">
+                      <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                          <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </footer>
+</div>
+<script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+  <!-- Initialize Swiper -->
+  
+</body>
+</html>

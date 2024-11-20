@@ -1,0 +1,152 @@
+.login-container{
+    max-width: 1000px;
+    /* height: 500px; */
+    background: #D0D0D0;
+    padding: 0px;
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cart-login{
+    width: 75%;
+    height: 500px;
+    /* background-color: burlywood; */
+}
+.cart-login .title-cart{
+    width: 100%;
+    /* background: #000; */
+    margin-top: 60px;
+}
+.cart-login .title-cart .title{
+    text-align: center;
+}
+.inp-con{
+    width: 100%;
+    height: 140px;
+    /* background: #000; */
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.inp-con .inp-cart {
+    width: 70%;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inp-con .inp-cart .icon-cart{
+    width: 15%;
+    height: 100%;
+    color: rgb(255, 253, 253);
+}
+.inp-con .inp-cart .icon-cart i{
+    display: flex;
+    justify-content: end; /* Center horizontally */
+    align-items: center;
+    height: 100%;     /* Center vertically */
+    font-size: 25px; 
+    color: black;
+}
+.inp-con .inp-cart .inp{
+    width: 85%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 0px;
+    padding-left: 20px;
+    /* for text */
+    font-size: 17px;
+    font-family: signika;
+    color: black;
+}
+.inp-con .inp-cart .inp:focus{
+    border: 0px;
+    outline: none;
+}
+.inp-con .inp-cart .inp::placeholder{
+    font-size: 17px;
+    font-family: signika;
+    color: black;
+}
+.singin-cart{
+    /* background: #000; */
+    margin-top: 10px;
+    padding-left: 140px;
+}
+.btn-cart{
+    width: 100%;
+    height: 45px;
+    /* background: #6fc143; */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    /* height: 100vh; */
+}
+.btn-cart  .btn {
+    padding: 10px 20px;        /* Adjust padding as needed */
+    font-size: 16px;           /* Adjust font size as needed */
+    background-color: #121212; /* Button background color */
+    color: #fff;               /* Button text color */
+    border: none;              /* Remove default border */
+    border-radius: 4px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .btn:hover {
+    background-color: #282424; /* Button background color on hover */
+  }
+
+.ruler{
+    width: 80%;
+    height: 1.5px;
+    /* margin-top:px !important; */
+    margin: auto;
+    background: #000;
+    
+}
+.forgot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cart-img{
+    width: 45%;
+    height: 500px;
+    /* background-color: brown; */
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: end;
+
+}
+.cart-img img{
+    /* width: 80%; */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 65px 0px 0px 55px ;
+    
+}
+@media (max-width: 770px) {
+    .cart-img, .img-log{
+        display: none;
+    }
+    .cart-login{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .cart-img, .img-log{
+        display: none;
+    }
+    .cart-login{
+        width: 100%;
+    }
+    .inp-con{
+
+        margin-left: 0px;
+    }
+    
+}
